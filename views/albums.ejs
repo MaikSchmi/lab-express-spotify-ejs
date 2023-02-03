@@ -1,0 +1,13 @@
+<div>
+    <% receivedAlbums.items.forEach(result => { %>
+        <div><%- result.name %></div>
+        <% if (result.images.length > 0) { %>
+            <img src="<%-result.images[0].url%>" alt="notfound">
+        <% } else { %>
+            <img src="https://www.scdn.co/i/_global/open-graph-default.png" alt="notfound2">
+        <% } %> 
+        <form action="/tracks" method="GET">
+            <button type="submit"><a href="/tracks/<%- result.id %>">View Tracks</a></button>
+        </form>
+    <% }) %>
+</div>
