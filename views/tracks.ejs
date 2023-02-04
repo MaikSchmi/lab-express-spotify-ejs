@@ -1,10 +1,14 @@
-<div>
-    <% receivedTracks.items.forEach(result => { %>
-        <div><%- result.name %></div>
-        <audio
-            controls
-            src="<%- result.preview_url%>">
-            <a href="<%- result.preview_url%>">Preview Audio</a>
-        </audio>
-    <% }) %>
+<div class="track-ctn">
+    <div class="track-ctn-view">
+        <% receivedTracks.items.forEach(result => { %>
+            <div class="track-card">
+                <div><%- result.name %></div>
+                <audio
+                    controls
+                    src="<%- result.preview_url%>">
+                    <a href="<%- result.preview_url%>">Preview Audio</a>
+                </audio>
+            </div>
+        <% }) %>
+    </div>
 </div>

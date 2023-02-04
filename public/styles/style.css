@@ -1,0 +1,119 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: slategrey;
+}
+
+.artist-search-form-ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.artist-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.artist-search-form input {
+    height: 10vh;
+    width: 75vw;
+    margin-bottom: 50px;
+    font-size: 30px;
+    padding: 5px 20px;
+}
+
+.artist-search-form button {
+    height: 10vh;
+    width: 20vw;
+    font-size: 30px;
+}
+
+.search-results-ctn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-results {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-results img {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    margin: 5px 10px;
+}
+
+.search-results-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    margin: 30px 0;
+}
+
+.search-results-card-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.search-results-card button {
+    background-color: red;
+    height: 50px;
+    width: 200px;
+    margin: 5px;
+}
+
+.search-results-card a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.track-ctn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-ctn-view {
+    background-color: black;
+}
+
+.track-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: 700px;
+    background-color: black;
+}
+
+.track-card div {
+    width: 200px;
+    border: 3px solid rgb(255, 162, 162);
+    background-color: rgb(255, 119, 119);
+    font-size: 20px;
+    padding: 15px 30px;
+    margin-right: 50px;
+}
