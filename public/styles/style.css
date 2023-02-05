@@ -37,6 +37,10 @@ body {
     font-size: 30px;
 }
 
+h2 {
+    text-align: center;
+}
+
 .search-results-ctn {
     display: flex;
     justify-content: space-around;
@@ -75,14 +79,14 @@ body {
     text-decoration: underline;
 }
 
-.search-results-card button {
+.view-button {
     background-color: red;
     height: 50px;
     width: 200px;
     margin: 5px;
 }
 
-.search-results-card a {
+.view-button a {
     text-decoration: none;
     color: black;
     font-weight: bold;
