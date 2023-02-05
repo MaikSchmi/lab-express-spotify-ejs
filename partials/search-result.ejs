@@ -2,19 +2,19 @@
     <div class="search-results">
         <% receivedData.items.forEach(result => { %>
             <div class="search-results-card">
-                <div class="search-results-card-title">
                 
                 <!-- RESULT DISPLAY -->
-                <%- result.name %></div>
                 <% if (result.images.length > 0) { %>
                     <img src="<%-result.images[0].url%>" alt="notfound">
                 <% } else { %>
                     <img src="https://www.scdn.co/i/_global/open-graph-default.png" alt="notfound2">
                 <% } %> 
                 
+                <div class="search-results-card-title"><%- result.name %></div>
+
                 <!-- BUTTONS -->
                 <% if (result.type === "artist") { %>
-                    <form action="/albums/<%- result.id %>" method="GET">
+                    <form action="/albums/<%- result.id %>" method="GET" >
                         <button type="submit" class="view-button"><a href="/albums/<%- result.id %>">View Albums</a></button>
                     </form>
                 <% } else if (result.type === "album") { %>

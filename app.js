@@ -25,16 +25,18 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+let search = "";
+
 app.get("/", (req, res) => {
     res.render("index");
 })
 
 app.get("/artist-search", (req, res) => {
-    const search = req.query.findArtist;
-    spotifyApi.searchArtists(search)
+    const artist = req.query.findArtist;
+    spotifyApi.searchArtists(artist)
     .then(data => {
         const receivedData = data.body.artists;
-        console.log("Received data from API: ", search);
+        search = artist;
         res.render("artist-search-results", {search, receivedData})
     })
 })
@@ -44,7 +46,7 @@ app.get("/albums/:id", (req, res) => {
     spotifyApi.getArtistAlbums(id)
     .then(data => {
         const receivedAlbums = data.body;
-        res.render("albums", {receivedAlbums}) 
+        res.render("albums", {search, receivedAlbums}) 
     })
     .catch(err => console.log(err));
 })
@@ -58,4 +60,5 @@ app.get("/tracks/:id", (req, res) => {
     })
 })
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))
+// Change "192.168.1.84" to your local IP to access Node.js from other devices in the network
+app.listen(3000, "192.168.1.84", () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))

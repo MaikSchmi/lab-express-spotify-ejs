@@ -1,5 +1,5 @@
 <h2>
-    <%- receivedData.items.length %> results for your search "<%- search %>"
+    <%- receivedData.items.length %> results for your search: "<%-search%>"
 </h2>
 
-<%- include("../partials/search-result", receivedData) %>
+<%- include("../partials/search-result", {receivedData}) %>
